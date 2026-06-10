@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final 💖</title>
+<style>
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+#text{
+  max-width:500px;
+  font-size:20px;
+  white-space:pre-line;
+}
+</style>
+</head>
+
+<body>
+
+<div id="text"></div>
+
+<script>
+let name = localStorage.getItem("name") || "Ammi";
+
+let msg = `Thathi 11th yanna okay kiwwa amma 💖
+
+Adarei ammi godaaak,
+mata kammali ane ada meka hadagena hitiya
+
+Ummmmmmmmmmmaaaaaaaaaaaa 💖`;
+
+let i=0;
+function type(){
+  if(i<msg.length){
+    document.getElementById("text").innerHTML += msg[i];
+    i++;
+    setTimeout(type,40);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
