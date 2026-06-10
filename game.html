@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game 💖</title>
+<style>
+body{
+  height:100vh;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#fff0f5;
+  overflow:hidden;
+}
+button{
+  padding:15px;
+  border:none;
+  border-radius:20px;
+  margin:10px;
+}
+#no{
+  position:absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h2 id="q"></h2>
+
+<button style="background:#ff4d6d;color:white" onclick="yes()">Yes ❤️</button>
+<button id="no">No 💔</button>
+
+<script>
+let name = localStorage.getItem("name");
+document.getElementById("q").innerText =
+`Do you love me thangam, ${name}? 😏`;
+
+document.addEventListener("mousemove",()=>{
+  let no=document.getElementById("no");
+  no.style.left=Math.random()*window.innerWidth+"px";
+  no.style.top=Math.random()*window.innerHeight+"px";
+});
+
+function yes(){
+  window.location.href="page2.html";
+}
+</script>
+
+</body>
+</html>
