@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message 💖</title>
+<style>
+body{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#fff0f5;
+}
+input,button{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  margin:10px;
+}
+button{background:#ff4d6d;color:white;}
+</style>
+</head>
+
+<body>
+
+<h2>amma mata umma one 💖</h2>
+
+<input id="msg" placeholder="Type here...">
+<br>
+<button onclick="send()">Send 💌</button>
+
+<p id="out"></p>
+
+<script>
+function send(){
+  let m=document.getElementById("msg").value;
+  document.getElementById("out").innerText =
+  "Sent ❤️: " + m;
+}
+</script>
+
+</body>
+</html>
